@@ -1,45 +1,50 @@
 ### Задание Linux:
 
-1) Используйте команды операционной системы Linux и создайте
-   две новых директории – «Игрушки для школьников» и «Игрушки
-   для дошколят»
+1) Используя команду cat в терминале операционной системы Linux, создать
+два файла Домашние животные (заполнив файл собаками, кошками,
+хомяками) и Вьючные животными заполнив файл Лошадьми, верблюдами и
+ослы), а затем объединить их. Просмотреть содержимое созданного файла.
+Переименовать файл, дав ему новое имя (Друзья человека).
 
-> dmitry@ubuntu-vb:~/IntermediateAttestationLinux$ mkdir Игрушки\ для\ школьников Игрушки\ для\ дошколят
+> dmitry@ubuntu-vb:~/FinalWorkJavaPythonLinuxSQL$ cat > pets  
+> dogs  
+> cats  
+> hamster
+> 
+> dmitry@ubuntu-vb:~/FinalWorkJavaPythonLinuxSQL$ cat > pack_animals  
+> horses  
+> camels  
+> donkeys  
+> 
+> dmitry@ubuntu-vb:~/FinalWorkJavaPythonLinuxSQL$ cat pets pack_animals > human_friends  
+> dmitry@ubuntu-vb:~/FinalWorkJavaPythonLinuxSQL$ cat human_friends  
+> dogs  
+> cats  
+> hamster  
+> horses  
+> camels  
+> donkeys  
 
-2) Создайте в директории «Игрушки для школьников» текстовые
-   файлы - «Роботы», «Конструктор», «Настольные игры»
+2) Создать директорию, переместить файл туда.
 
-> dmitry@ubuntu-vb:~/IntermediateAttestationLinux$ cd Игрушки\ для\ школьников/  
-> dmitry@ubuntu-vb:~/IntermediateAttestationLinux/Игрушки для школьников$ touch Роботы Конструктор Настольные\ игры
+> dmitry@ubuntu-vb:~/FinalWorkJavaPythonLinuxSQL$ mkdir friends  
+> dmitry@ubuntu-vb:~/FinalWorkJavaPythonLinuxSQL$ mv human_friends friends
 
-3) Создайте в директории «Игрушки для дошколят» текстовые
-   файлы «Мягкие игрушки», «Куклы», «Машинки»
+3) Подключить дополнительный репозиторий MySQL. Установить любой пакет
+из этого репозитория.
 
-> dmitry@ubuntu-vb:~/IntermediateAttestationLinux$ cd Игрушки\ для\ дошколят/  
-> dmitry@ubuntu-vb:~/IntermediateAttestationLinux/Игрушки для дошколят$ touch Куклы Машинки Мягкие\ игрушки
+> загрузить deb пакет с конфигурацией репозитория из официального сайта  
+> dmitry@ubuntu-vb:~/FinalWorkJavaPythonLinuxSQL$ sudo dpkg -i mysql-apt-config_0.8.25-1_all.deb   
+> dmitry@ubuntu-vb:~/FinalWorkJavaPythonLinuxSQL$ sudo apt update  
+> dmitry@ubuntu-vb:~/FinalWorkJavaPythonLinuxSQL$ sudo apt install mysql-server mysql-client -y
 
-4) Объединить 2 директории в одну «Имя Игрушки»
+4) Установить и удалить deb-пакет с помощью dpkg.
 
-> dmitry@ubuntu-vb:~/IntermediateAttestationLinux$ mkdir Имя\ Игрушки; cp -a 'Игрушки для школьников'/* 'Игрушки для дошколят'/* 'Имя Игрушки'; rm -rf 'Игрушки для школьников'; rm -rf 'Игрушки для дошколят'
+> dmitry@ubuntu-vb:~/FinalWorkJavaPythonLinuxSQL$ wget https://download.virtualbox.org/virtualbox/7.0.8/virtualbox-7.0_7.0.8-156879~Ubuntu~jammy_amd64.deb  
+> dmitry@ubuntu-vb:~/FinalWorkJavaPythonLinuxSQL$ sudo dpkg -i virtualbox-7.0_7.0.8-156879~Ubuntu~jammy_amd64.deb     
+> dmitry@ubuntu-vb:~/FinalWorkJavaPythonLinuxSQL$ sudo apt -f install  
+> dmitry@ubuntu-vb:~/FinalWorkJavaPythonLinuxSQL$ sudo dpkg -r virtualbox-7.0
 
-5) Переименовать директорию «Имя Игрушки» в «Игрушки»
+5) Выложить историю команд в терминале ubuntu
 
-> dmitry@ubuntu-vb:~/IntermediateAttestationLinux$ mv Имя\ Игрушки/ Игрушки
-
-6) Просмотреть содержимое каталога «Игрушки».
-
-> dmitry@ubuntu-vb:~/IntermediateAttestationLinux$ cd Игрушки/; ls -al
-
-7) Установить и удалить snap-пакет. (Любой, какой хотите)
-
-> dmitry@ubuntu-vb:~$ sudo snap install chromium  
-> chromium 111.0.5563.64 from Canonical✓ installed  
-> dmitry@ubuntu-vb:~$ sudo snap remove chromium  
-> chromium removed
-
-8) Добавить произвольную задачу для выполнения каждые 3
-   минуты (Например, запись в текстовый файл чего-то или
-   копирование из каталога А в каталог Б).
-
-> dmitry@ubuntu-vb:~/IntermediateAttestationLinux$ crontab -e  
-> */3 * * * * echo 'Hello' >> /home/dmitry/IntermediateAttestationLinux/test.log
+> приложены к каждому заданию
