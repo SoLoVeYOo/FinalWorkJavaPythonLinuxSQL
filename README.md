@@ -51,4 +51,8 @@
 типа счетчик была не в ресурсном try и/или ресурс остался открыт. Значение
 считать в ресурсе try, если при заведении животного заполнены все поля.  
 
-*[ссылка на GitHub](https://github.com/SoLoVeYOo/IntermediateAttestationJavaLinux)*
+## Выполнение:
+### по заданиям Linux представлены в файле Linux.md
+### по заданиям SQL представлены в файле MySQL.md
+### по кодингу представлены в папке TaskPython
+*[ссылка на GitHub](https://github.com/SoLoVeYOo/FinalWorkJavaPythonLinuxSQL)*
